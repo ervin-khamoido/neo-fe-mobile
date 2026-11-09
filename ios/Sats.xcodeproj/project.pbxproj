@@ -1,0 +1,1596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* NeobankTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NeobankTests.m */; };
+		0BFB203417EF46699005D6ED /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FDDC59C67B84935B41F1582 /* Inter-ExtraLight.ttf */; };
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		5803557E294B8310006AC16E /* RCTBuildInfoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803557D294B8310006AC16E /* RCTBuildInfoModule.m */; };
+		5803557F294B8310006AC16E /* RCTBuildInfoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803557D294B8310006AC16E /* RCTBuildInfoModule.m */; };
+		58035580294B8310006AC16E /* RCTBuildInfoModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5803557D294B8310006AC16E /* RCTBuildInfoModule.m */; };
+		580A3A0A288C9CC90062D225 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEF7E28858E19008A84D3 /* SplashScreen.swift */; };
+		580A3A0C288C9CC90062D225 /* RNSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C783D32885AD2500CA6EBD /* RNSplashScreen.m */; };
+		580A3A0D288C9CC90062D225 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		580A3A11288C9CC90062D225 /* Neobank.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 96CA986D27A023DA00C77B69 /* Neobank.entitlements */; };
+		580A3A12288C9CC90062D225 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C783D62885AFBE00CA6EBD /* SplashView.xib */; };
+		580A3A13288C9CC90062D225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		580A3A14288C9CC90062D225 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		580A3A15288C9CC90062D225 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94E5843B2AA488FA4A468BB /* Inter-Black.ttf */; };
+		580A3A16288C9CC90062D225 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C407DEA363D46EB9B2D4ED3 /* Inter-Bold.ttf */; };
+		580A3A17288C9CC90062D225 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EE358F387EC41CC9FB7E665 /* Inter-ExtraBold.ttf */; };
+		580A3A18288C9CC90062D225 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FDDC59C67B84935B41F1582 /* Inter-ExtraLight.ttf */; };
+		580A3A19288C9CC90062D225 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D26F23E9D05A4C579D28AAA4 /* Inter-Light.ttf */; };
+		580A3A1A288C9CC90062D225 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDCD3901D9D5463B92791F7E /* Inter-Medium.ttf */; };
+		580A3A1B288C9CC90062D225 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35267EC75D7542D5B5D57FC9 /* Inter-Regular.ttf */; };
+		580A3A1C288C9CC90062D225 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9869B952F03A476A811D75EC /* Inter-SemiBold.ttf */; };
+		580A3A1D288C9CC90062D225 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB4931638174AF9A05C6C93 /* Inter-Thin.ttf */; };
+		580A3A1E288C9CC90062D225 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FEF752881A804008A84D3 /* splash.json */; };
+		580DD54728AB9747004F802E /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEF7E28858E19008A84D3 /* SplashScreen.swift */; };
+		580DD54928AB9747004F802E /* RNSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C783D32885AD2500CA6EBD /* RNSplashScreen.m */; };
+		580DD54A28AB9747004F802E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		580DD54E28AB9747004F802E /* Neobank.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 96CA986D27A023DA00C77B69 /* Neobank.entitlements */; };
+		580DD54F28AB9747004F802E /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C783D62885AFBE00CA6EBD /* SplashView.xib */; };
+		580DD55028AB9747004F802E /* splash_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 585DF724289412A5007E2EE5 /* splash_new.json */; };
+		580DD55128AB9747004F802E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		580DD55228AB9747004F802E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		580DD55328AB9747004F802E /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94E5843B2AA488FA4A468BB /* Inter-Black.ttf */; };
+		580DD55428AB9747004F802E /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C407DEA363D46EB9B2D4ED3 /* Inter-Bold.ttf */; };
+		580DD55528AB9747004F802E /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EE358F387EC41CC9FB7E665 /* Inter-ExtraBold.ttf */; };
+		580DD55628AB9747004F802E /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FDDC59C67B84935B41F1582 /* Inter-ExtraLight.ttf */; };
+		580DD55728AB9747004F802E /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D26F23E9D05A4C579D28AAA4 /* Inter-Light.ttf */; };
+		580DD55828AB9747004F802E /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDCD3901D9D5463B92791F7E /* Inter-Medium.ttf */; };
+		580DD55928AB9747004F802E /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35267EC75D7542D5B5D57FC9 /* Inter-Regular.ttf */; };
+		580DD55A28AB9747004F802E /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9869B952F03A476A811D75EC /* Inter-SemiBold.ttf */; };
+		580DD55B28AB9747004F802E /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB4931638174AF9A05C6C93 /* Inter-Thin.ttf */; };
+		580DD55C28AB9747004F802E /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FEF752881A804008A84D3 /* splash.json */; };
+		585DF725289412A5007E2EE5 /* splash_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 585DF724289412A5007E2EE5 /* splash_new.json */; };
+		585DF726289412A5007E2EE5 /* splash_new.json in Resources */ = {isa = PBXBuildFile; fileRef = 585DF724289412A5007E2EE5 /* splash_new.json */; };
+		585FEF762881A804008A84D3 /* splash.json in Resources */ = {isa = PBXBuildFile; fileRef = 585FEF752881A804008A84D3 /* splash.json */; };
+		585FEF7F28858E19008A84D3 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585FEF7E28858E19008A84D3 /* SplashScreen.swift */; };
+		589E973528ABC9D9006FB8A4 /* libPods-Neobank-NeobankDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 589E973428ABC9D9006FB8A4 /* libPods-Neobank-NeobankDev.a */; };
+		58BE310B2A95F6AF001AA587 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58BE310A2A95F6AF001AA587 /* AppDelegate.mm */; };
+		58BE310C2A95F6C6001AA587 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58BE310A2A95F6AF001AA587 /* AppDelegate.mm */; };
+		58BE310D2A95F6D1001AA587 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 58BE310A2A95F6AF001AA587 /* AppDelegate.mm */; };
+		58C783D42885AD2500CA6EBD /* RNSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C783D32885AD2500CA6EBD /* RNSplashScreen.m */; };
+		58C783D72885AFBE00CA6EBD /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58C783D62885AFBE00CA6EBD /* SplashView.xib */; };
+		79453EF8D2A6441DB8EAD625 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9869B952F03A476A811D75EC /* Inter-SemiBold.ttf */; };
+		794769295ACD48819073A58D /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2EE358F387EC41CC9FB7E665 /* Inter-ExtraBold.ttf */; };
+		7EF68E3733C33B6898317E18 /* libPods-Neobank-NeobankTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABFE59519B596E51CEFDCCC0 /* libPods-Neobank-NeobankTests.a */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		96CA986E27A0244E00C77B69 /* Neobank.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 96CA986D27A023DA00C77B69 /* Neobank.entitlements */; };
+		977F87B9A062467F85E45126 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DDCD3901D9D5463B92791F7E /* Inter-Medium.ttf */; };
+		AE103D5D1F504948010176A7 /* libPods-Neobank-NeobankStg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C51D72FD033C30B7DC051862 /* libPods-Neobank-NeobankStg.a */; };
+		AEE4245FD6C83DEB2932CF4B /* libPods-Neobank.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC4A2F21ABE494588C11FD5 /* libPods-Neobank.a */; };
+		C4EFCFB62EB84F35AC28673A /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D26F23E9D05A4C579D28AAA4 /* Inter-Light.ttf */; };
+		D95A1126C6AC44548D9C80AE /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCB4931638174AF9A05C6C93 /* Inter-Thin.ttf */; };
+		E026B7E2BDC84782A8A746F1 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35267EC75D7542D5B5D57FC9 /* Inter-Regular.ttf */; };
+		F05CBF665E9D4C9FBF1C2427 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C407DEA363D46EB9B2D4ED3 /* Inter-Bold.ttf */; };
+		F8432432889A4328A027FA0B /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C94E5843B2AA488FA4A468BB /* Inter-Black.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
+			remoteInfo = Neobank;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00E356EE1AD99517003FC87E /* NeobankTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeobankTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* NeobankTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeobankTests.m; sourceTree = "<group>"; };
+		0C407DEA363D46EB9B2D4ED3 /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../assets/fonts/Inter/static/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Neobank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobank.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Neobank/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Neobank/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Neobank/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Neobank/main.m; sourceTree = "<group>"; };
+		1D0AE47A65C8663E3B452821 /* Pods-Neobank-NeobankTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankTests.release.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests.release.xcconfig"; sourceTree = "<group>"; };
+		2EE358F387EC41CC9FB7E665 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraBold.ttf"; path = "../assets/fonts/Inter/static/Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2FDDC59C67B84935B41F1582 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-ExtraLight.ttf"; path = "../assets/fonts/Inter/static/Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		35267EC75D7542D5B5D57FC9 /* Inter-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Regular.ttf"; path = "../assets/fonts/Inter/static/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		418E9F366825BB7E09771F35 /* Pods-Neobank-NeobankDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankDev.debug.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev.debug.xcconfig"; sourceTree = "<group>"; };
+		45B9BAF058B9E3AE3D100EBE /* Pods-Neobank-NeobankDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankDev.release.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev.release.xcconfig"; sourceTree = "<group>"; };
+		55CBCF29A59E3B3867A13290 /* Pods-Neobank-NeobankStg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankStg.debug.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg.debug.xcconfig"; sourceTree = "<group>"; };
+		5803557D294B8310006AC16E /* RCTBuildInfoModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTBuildInfoModule.m; sourceTree = "<group>"; };
+		58035581294B8328006AC16E /* RCTBuildInfoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTBuildInfoModule.h; sourceTree = "<group>"; };
+		580A3A27288C9CC90062D225 /* NeobankDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeobankDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		580DD56528AB9747004F802E /* NeobankStg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeobankStg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		585DF724289412A5007E2EE5 /* splash_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = splash_new.json; path = ../../android/app/src/main/res/raw/splash_new.json; sourceTree = "<group>"; };
+		585FEF752881A804008A84D3 /* splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splash.json; sourceTree = "<group>"; };
+		585FEF7D28858E19008A84D3 /* Neobank-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neobank-Bridging-Header.h"; sourceTree = "<group>"; };
+		585FEF7E28858E19008A84D3 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		589E973428ABC9D9006FB8A4 /* libPods-Neobank-NeobankDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Neobank-NeobankDev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58BE310A2A95F6AF001AA587 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Neobank/AppDelegate.mm; sourceTree = "<group>"; };
+		58C783D32885AD2500CA6EBD /* RNSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSplashScreen.m; sourceTree = "<group>"; };
+		58C783D52885AD3600CA6EBD /* RNSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSplashScreen.h; sourceTree = "<group>"; };
+		58C783D62885AFBE00CA6EBD /* SplashView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
+		6C97AB639B58BBB4B15BBE30 /* Pods-Neobank-NeobankTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankTests.debug.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Neobank/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92399A54BF5D4EA8739CFCED /* Pods-Neobank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank.release.xcconfig"; path = "Target Support Files/Pods-Neobank/Pods-Neobank.release.xcconfig"; sourceTree = "<group>"; };
+		96CA986D27A023DA00C77B69 /* Neobank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Neobank.entitlements; path = Neobank/Neobank.entitlements; sourceTree = "<group>"; };
+		9869B952F03A476A811D75EC /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-SemiBold.ttf"; path = "../assets/fonts/Inter/static/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		A792AF5D98B0F4A93D8841B1 /* Pods-Neobank.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank.debug.xcconfig"; path = "Target Support Files/Pods-Neobank/Pods-Neobank.debug.xcconfig"; sourceTree = "<group>"; };
+		ABFE59519B596E51CEFDCCC0 /* libPods-Neobank-NeobankTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neobank-NeobankTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC4A2F21ABE494588C11FD5 /* libPods-Neobank.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neobank.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C19CCC0F18B5621549FBA2E2 /* Pods-Neobank-NeobankStg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobank-NeobankStg.release.xcconfig"; path = "Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg.release.xcconfig"; sourceTree = "<group>"; };
+		C51D72FD033C30B7DC051862 /* libPods-Neobank-NeobankStg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Neobank-NeobankStg.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94E5843B2AA488FA4A468BB /* Inter-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Black.ttf"; path = "../assets/fonts/Inter/static/Inter-Black.ttf"; sourceTree = "<group>"; };
+		D26F23E9D05A4C579D28AAA4 /* Inter-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Light.ttf"; path = "../assets/fonts/Inter/static/Inter-Light.ttf"; sourceTree = "<group>"; };
+		DDCD3901D9D5463B92791F7E /* Inter-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Medium.ttf"; path = "../assets/fonts/Inter/static/Inter-Medium.ttf"; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		FCB4931638174AF9A05C6C93 /* Inter-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Thin.ttf"; path = "../assets/fonts/Inter/static/Inter-Thin.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00E356EB1AD99517003FC87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EF68E3733C33B6898317E18 /* libPods-Neobank-NeobankTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEE4245FD6C83DEB2932CF4B /* libPods-Neobank.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580A3A0E288C9CC90062D225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				589E973528ABC9D9006FB8A4 /* libPods-Neobank-NeobankDev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580DD54B28AB9747004F802E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE103D5D1F504948010176A7 /* libPods-Neobank-NeobankStg.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* NeobankTests */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* NeobankTests.m */,
+				00E356F01AD99517003FC87E /* Supporting Files */,
+			);
+			path = NeobankTests;
+			sourceTree = "<group>";
+		};
+		00E356F01AD99517003FC87E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F11AD99517003FC87E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		13B07FAE1A68108700A75B9A /* Neobank */ = {
+			isa = PBXGroup;
+			children = (
+				58BE310A2A95F6AF001AA587 /* AppDelegate.mm */,
+				5803557C294B8294006AC16E /* BuildInfo */,
+				585FEF7D28858E19008A84D3 /* Neobank-Bridging-Header.h */,
+				58B5F2612875952900AD181B /* SplashScreen */,
+				96CA986D27A023DA00C77B69 /* Neobank.entitlements */,
+				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				13B07FB71A68108700A75B9A /* main.m */,
+			);
+			name = Neobank;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				589E973428ABC9D9006FB8A4 /* libPods-Neobank-NeobankDev.a */,
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				ABFE59519B596E51CEFDCCC0 /* libPods-Neobank-NeobankTests.a */,
+				BDC4A2F21ABE494588C11FD5 /* libPods-Neobank.a */,
+				C51D72FD033C30B7DC051862 /* libPods-Neobank-NeobankStg.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5803557C294B8294006AC16E /* BuildInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5803557D294B8310006AC16E /* RCTBuildInfoModule.m */,
+				58035581294B8328006AC16E /* RCTBuildInfoModule.h */,
+			);
+			path = BuildInfo;
+			sourceTree = "<group>";
+		};
+		58B5F2612875952900AD181B /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				585DF724289412A5007E2EE5 /* splash_new.json */,
+				585FEF752881A804008A84D3 /* splash.json */,
+				585FEF7E28858E19008A84D3 /* SplashScreen.swift */,
+				58C783D32885AD2500CA6EBD /* RNSplashScreen.m */,
+				58C783D52885AD3600CA6EBD /* RNSplashScreen.h */,
+				58C783D62885AFBE00CA6EBD /* SplashView.xib */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* Neobank */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				00E356EF1AD99517003FC87E /* NeobankTests */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				E233CBF5F47BEE60B243DCF8 /* Pods */,
+				A8CC7145E5AB4582907579A2 /* Resources */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* Neobank.app */,
+				00E356EE1AD99517003FC87E /* NeobankTests.xctest */,
+				580A3A27288C9CC90062D225 /* NeobankDev.app */,
+				580DD56528AB9747004F802E /* NeobankStg.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8CC7145E5AB4582907579A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C94E5843B2AA488FA4A468BB /* Inter-Black.ttf */,
+				0C407DEA363D46EB9B2D4ED3 /* Inter-Bold.ttf */,
+				2EE358F387EC41CC9FB7E665 /* Inter-ExtraBold.ttf */,
+				2FDDC59C67B84935B41F1582 /* Inter-ExtraLight.ttf */,
+				D26F23E9D05A4C579D28AAA4 /* Inter-Light.ttf */,
+				DDCD3901D9D5463B92791F7E /* Inter-Medium.ttf */,
+				35267EC75D7542D5B5D57FC9 /* Inter-Regular.ttf */,
+				9869B952F03A476A811D75EC /* Inter-SemiBold.ttf */,
+				FCB4931638174AF9A05C6C93 /* Inter-Thin.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C97AB639B58BBB4B15BBE30 /* Pods-Neobank-NeobankTests.debug.xcconfig */,
+				1D0AE47A65C8663E3B452821 /* Pods-Neobank-NeobankTests.release.xcconfig */,
+				A792AF5D98B0F4A93D8841B1 /* Pods-Neobank.debug.xcconfig */,
+				92399A54BF5D4EA8739CFCED /* Pods-Neobank.release.xcconfig */,
+				418E9F366825BB7E09771F35 /* Pods-Neobank-NeobankDev.debug.xcconfig */,
+				45B9BAF058B9E3AE3D100EBE /* Pods-Neobank-NeobankDev.release.xcconfig */,
+				55CBCF29A59E3B3867A13290 /* Pods-Neobank-NeobankStg.debug.xcconfig */,
+				C19CCC0F18B5621549FBA2E2 /* Pods-Neobank-NeobankStg.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00E356ED1AD99517003FC87E /* NeobankTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "NeobankTests" */;
+			buildPhases = (
+				A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */,
+				00E356EA1AD99517003FC87E /* Sources */,
+				00E356EB1AD99517003FC87E /* Frameworks */,
+				00E356EC1AD99517003FC87E /* Resources */,
+				077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */,
+				4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00E356F51AD99517003FC87E /* PBXTargetDependency */,
+			);
+			name = NeobankTests;
+			productName = NeobankTests;
+			productReference = 00E356EE1AD99517003FC87E /* NeobankTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13B07F861A680F5B00A75B9A /* Neobank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Neobank" */;
+			buildPhases = (
+				3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */,
+				96B94D3227BBD9940010FEF4 /* [Doppler] inject GoogleService-Info.plist */,
+				96861F9A27B52F9000F92AA4 /* [Doppler] inject env.json */,
+				FD10A7F022414F080027D42C /* Start Packager */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				585FEF6C28819659008A84D3 /* [Doppler] inject plist configurations */,
+				583E5A6A28C24E3600635B9B /* [CI/CD] inject marketing version */,
+				C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */,
+				ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */,
+				D97FF0FD83DDAE881D9200DC /* [CP-User] [RNFB] Core Configuration */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Neobank;
+			productName = Neobank;
+			productReference = 13B07F961A680F5B00A75B9A /* Neobank.app */;
+			productType = "com.apple.product-type.application";
+		};
+		580A3A04288C9CC90062D225 /* NeobankDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 580A3A24288C9CC90062D225 /* Build configuration list for PBXNativeTarget "NeobankDev" */;
+			buildPhases = (
+				580A3A05288C9CC90062D225 /* [CP] Check Pods Manifest.lock */,
+				580A3A06288C9CC90062D225 /* [Doppler] inject GoogleService-Info.plist */,
+				580A3A07288C9CC90062D225 /* [Doppler] inject env.json */,
+				580A3A08288C9CC90062D225 /* Start Packager */,
+				580A3A09288C9CC90062D225 /* Sources */,
+				580A3A0E288C9CC90062D225 /* Frameworks */,
+				580A3A10288C9CC90062D225 /* Resources */,
+				580A3A1F288C9CC90062D225 /* Bundle React Native code and images */,
+				580A3A20288C9CC90062D225 /* [Doppler] inject plist configurations */,
+				583E5A6928C24D1000635B9B /* [CI/CD] inject marketing version */,
+				580A3A21288C9CC90062D225 /* [CP] Embed Pods Frameworks */,
+				580A3A22288C9CC90062D225 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeobankDev;
+			productName = Neobank;
+			productReference = 580A3A27288C9CC90062D225 /* NeobankDev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		580DD54128AB9747004F802E /* NeobankStg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 580DD56228AB9747004F802E /* Build configuration list for PBXNativeTarget "NeobankStg" */;
+			buildPhases = (
+				580DD54228AB9747004F802E /* [CP] Check Pods Manifest.lock */,
+				580DD54328AB9747004F802E /* [Doppler] inject GoogleService-Info.plist */,
+				580DD54428AB9747004F802E /* [Doppler] inject env.json */,
+				580DD54528AB9747004F802E /* Start Packager */,
+				580DD54628AB9747004F802E /* Sources */,
+				580DD54B28AB9747004F802E /* Frameworks */,
+				580DD54D28AB9747004F802E /* Resources */,
+				580DD55D28AB9747004F802E /* Bundle React Native code and images */,
+				580DD55E28AB9747004F802E /* [Doppler] inject plist configurations */,
+				583E5A6828C24C5900635B9B /* [CI/CD] inject marketing version */,
+				580DD55F28AB9747004F802E /* [CP] Embed Pods Frameworks */,
+				580DD56028AB9747004F802E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeobankStg;
+			productName = Neobank;
+			productReference = 580DD56528AB9747004F802E /* NeobankStg.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					00E356ED1AD99517003FC87E = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1340;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Neobank" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* Neobank */,
+				580A3A04288C9CC90062D225 /* NeobankDev */,
+				580DD54128AB9747004F802E /* NeobankStg */,
+				00E356ED1AD99517003FC87E /* NeobankTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00E356EC1AD99517003FC87E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CA986E27A0244E00C77B69 /* Neobank.entitlements in Resources */,
+				58C783D72885AFBE00CA6EBD /* SplashView.xib in Resources */,
+				585DF725289412A5007E2EE5 /* splash_new.json in Resources */,
+				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F8432432889A4328A027FA0B /* Inter-Black.ttf in Resources */,
+				F05CBF665E9D4C9FBF1C2427 /* Inter-Bold.ttf in Resources */,
+				794769295ACD48819073A58D /* Inter-ExtraBold.ttf in Resources */,
+				0BFB203417EF46699005D6ED /* Inter-ExtraLight.ttf in Resources */,
+				C4EFCFB62EB84F35AC28673A /* Inter-Light.ttf in Resources */,
+				977F87B9A062467F85E45126 /* Inter-Medium.ttf in Resources */,
+				E026B7E2BDC84782A8A746F1 /* Inter-Regular.ttf in Resources */,
+				79453EF8D2A6441DB8EAD625 /* Inter-SemiBold.ttf in Resources */,
+				D95A1126C6AC44548D9C80AE /* Inter-Thin.ttf in Resources */,
+				585FEF762881A804008A84D3 /* splash.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580A3A10288C9CC90062D225 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				580A3A11288C9CC90062D225 /* Neobank.entitlements in Resources */,
+				580A3A12288C9CC90062D225 /* SplashView.xib in Resources */,
+				585DF726289412A5007E2EE5 /* splash_new.json in Resources */,
+				580A3A13288C9CC90062D225 /* LaunchScreen.storyboard in Resources */,
+				580A3A14288C9CC90062D225 /* Images.xcassets in Resources */,
+				580A3A15288C9CC90062D225 /* Inter-Black.ttf in Resources */,
+				580A3A16288C9CC90062D225 /* Inter-Bold.ttf in Resources */,
+				580A3A17288C9CC90062D225 /* Inter-ExtraBold.ttf in Resources */,
+				580A3A18288C9CC90062D225 /* Inter-ExtraLight.ttf in Resources */,
+				580A3A19288C9CC90062D225 /* Inter-Light.ttf in Resources */,
+				580A3A1A288C9CC90062D225 /* Inter-Medium.ttf in Resources */,
+				580A3A1B288C9CC90062D225 /* Inter-Regular.ttf in Resources */,
+				580A3A1C288C9CC90062D225 /* Inter-SemiBold.ttf in Resources */,
+				580A3A1D288C9CC90062D225 /* Inter-Thin.ttf in Resources */,
+				580A3A1E288C9CC90062D225 /* splash.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580DD54D28AB9747004F802E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				580DD54E28AB9747004F802E /* Neobank.entitlements in Resources */,
+				580DD54F28AB9747004F802E /* SplashView.xib in Resources */,
+				580DD55028AB9747004F802E /* splash_new.json in Resources */,
+				580DD55128AB9747004F802E /* LaunchScreen.storyboard in Resources */,
+				580DD55228AB9747004F802E /* Images.xcassets in Resources */,
+				580DD55328AB9747004F802E /* Inter-Black.ttf in Resources */,
+				580DD55428AB9747004F802E /* Inter-Bold.ttf in Resources */,
+				580DD55528AB9747004F802E /* Inter-ExtraBold.ttf in Resources */,
+				580DD55628AB9747004F802E /* Inter-ExtraLight.ttf in Resources */,
+				580DD55728AB9747004F802E /* Inter-Light.ttf in Resources */,
+				580DD55828AB9747004F802E /* Inter-Medium.ttf in Resources */,
+				580DD55928AB9747004F802E /* Inter-Regular.ttf in Resources */,
+				580DD55A28AB9747004F802E /* Inter-SemiBold.ttf in Resources */,
+				580DD55B28AB9747004F802E /* Inter-Thin.ttf in Resources */,
+				580DD55C28AB9747004F802E /* splash.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\nREACT_NATIVE_VECTOR_IMAGE=\"../node_modules/react-native-vector-image/strip_svgs.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n/bin/sh -c \"$REACT_NATIVE_VECTOR_IMAGE\"\n";
+		};
+		077E01280D4B4AD18B2E1770 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E482C27206C4DEF2FE45063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobank-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4E62BDF20514810D028A5FBF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankTests/Pods-Neobank-NeobankTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580A3A05288C9CC90062D225 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobank-NeobankDev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580A3A06288C9CC90062D225 /* [Doppler] inject GoogleService-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject GoogleService-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Loads GoogleService-Info.plist directly into build dir\ndoppler secrets get FIREBASE_IOS --plain > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\n\n";
+		};
+		580A3A07288C9CC90062D225 /* [Doppler] inject env.json */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject env.json";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Type a script or drag a script file from your workspace to insert its path.\ndoppler secrets download --fallback \"${SRCROOT}/../.doppler.cache\" --format json --no-file > ${SRCROOT}/../.env.json\n";
+		};
+		580A3A08288C9CC90062D225 /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] && [ \"$CONFIGURATION\" == \"Debug\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		580A3A1F288C9CC90062D225 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\nREACT_NATIVE_VECTOR_IMAGE=\"../node_modules/react-native-vector-image/strip_svgs.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n/bin/sh -c \"$REACT_NATIVE_VECTOR_IMAGE\"\n";
+		};
+		580A3A20288C9CC90062D225 /* [Doppler] inject plist configurations */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[Doppler] inject plist configurations";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nBRANCH_KEY=`doppler secrets get BRANCH_KEY --plain`\nBRANCH_DEFAULT_LINK=`doppler secrets get BRANCH_DEFAULT_LINK --plain`\n\nREVERSED_CLIENT_ID=`doppler secrets get FIREBASE_IOS_REVERSED_CLIENT_ID --plain`\nENCODED_APP_ID=`doppler secrets get FIREBASE_IOS_ENCODED_APP_ID --plain`\n\nFACEBOOK_APP_ID=`doppler secrets get FACEBOOK_APP_ID --plain`\nFACEBOOK_CLIENT_TOKEN=`doppler secrets get FACEBOOK_CLIENT_TOKEN --plain`\n\n/usr/libexec/PlistBuddy -c \"Set :branch_key:live ${BRANCH_KEY}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :branch_universal_link_domains:0 ${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :com.apple.developer.associated-domains:0 applinks:${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${CODE_SIGN_ENTITLEMENTS}\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:1:CFBundleURLSchemes:0 ${REVERSED_CLIENT_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:2:CFBundleURLSchemes:0 ${ENCODED_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Set :FacebookAppID ${FACEBOOK_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :FacebookClientToken ${FACEBOOK_CLIENT_TOKEN}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n# used for debug in the app\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PIPELINE_IID string ${CI_PIPELINE_IID:-1}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TAG string ${CI_COMMIT_TAG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_BRANCH string ${CI_COMMIT_BRANCH}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_SHORT_SHA string ${CI_COMMIT_SHORT_SHA}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TIMESTAMP string ${CI_COMMIT_TIMESTAMP}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_REF_SLUG string ${CI_COMMIT_REF_SLUG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PROJECT_NAME string ${CI_PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\nDOPPLER_ENVIRONMENT=`doppler secrets get DOPPLER_ENVIRONMENT --plain`\nDOPPLER_CONFIG=`doppler secrets get DOPPLER_CONFIG --plain`\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV string ${DOPPLER_ENVIRONMENT}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV_CONFIG string ${DOPPLER_CONFIG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		580A3A21288C9CC90062D225 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580A3A22288C9CC90062D225 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankDev/Pods-Neobank-NeobankDev-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580DD54228AB9747004F802E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobank-NeobankStg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580DD54328AB9747004F802E /* [Doppler] inject GoogleService-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject GoogleService-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Loads GoogleService-Info.plist directly into build dir\ndoppler secrets get FIREBASE_IOS --plain > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\n\n";
+		};
+		580DD54428AB9747004F802E /* [Doppler] inject env.json */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject env.json";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Type a script or drag a script file from your workspace to insert its path.\ndoppler secrets download --fallback \"${SRCROOT}/../.doppler.cache\" --format json --no-file > ${SRCROOT}/../.env.json\n";
+		};
+		580DD54528AB9747004F802E /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] && [ \"$CONFIGURATION\" == \"Debug\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		580DD55D28AB9747004F802E /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env.local",
+				"$(SRCROOT)/.xcode.env",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\nREACT_NATIVE_VECTOR_IMAGE=\"../node_modules/react-native-vector-image/strip_svgs.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n/bin/sh -c \"$REACT_NATIVE_VECTOR_IMAGE\"\n";
+		};
+		580DD55E28AB9747004F802E /* [Doppler] inject plist configurations */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[Doppler] inject plist configurations";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nBRANCH_KEY=`doppler secrets get BRANCH_KEY --plain`\nBRANCH_DEFAULT_LINK=`doppler secrets get BRANCH_DEFAULT_LINK --plain`\n\nREVERSED_CLIENT_ID=`doppler secrets get FIREBASE_IOS_REVERSED_CLIENT_ID --plain`\nENCODED_APP_ID=`doppler secrets get FIREBASE_IOS_ENCODED_APP_ID --plain`\n\nFACEBOOK_APP_ID=`doppler secrets get FACEBOOK_APP_ID --plain`\nFACEBOOK_CLIENT_TOKEN=`doppler secrets get FACEBOOK_CLIENT_TOKEN --plain`\n\n/usr/libexec/PlistBuddy -c \"Set :branch_key:live ${BRANCH_KEY}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :branch_universal_link_domains:0 ${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :com.apple.developer.associated-domains:0 applinks:${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${CODE_SIGN_ENTITLEMENTS}\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:1:CFBundleURLSchemes:0 ${REVERSED_CLIENT_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:2:CFBundleURLSchemes:0 ${ENCODED_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Set :FacebookAppID ${FACEBOOK_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :FacebookClientToken ${FACEBOOK_CLIENT_TOKEN}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n# used for debug in the app\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PIPELINE_IID string ${CI_PIPELINE_IID:-1}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TAG string ${CI_COMMIT_TAG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_BRANCH string ${CI_COMMIT_BRANCH}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_SHORT_SHA string ${CI_COMMIT_SHORT_SHA}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TIMESTAMP string ${CI_COMMIT_TIMESTAMP}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_REF_SLUG string ${CI_COMMIT_REF_SLUG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PROJECT_NAME string ${CI_PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\nDOPPLER_ENVIRONMENT=`doppler secrets get DOPPLER_ENVIRONMENT --plain`\nDOPPLER_CONFIG=`doppler secrets get DOPPLER_CONFIG --plain`\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV string ${DOPPLER_ENVIRONMENT}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV_CONFIG string ${DOPPLER_CONFIG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		580DD55F28AB9747004F802E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		580DD56028AB9747004F802E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank-NeobankStg/Pods-Neobank-NeobankStg-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		583E5A6828C24C5900635B9B /* [CI/CD] inject marketing version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CI/CD] inject marketing version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nciCommitTag=$CI_COMMIT_TAG\nciCommitBranch=$CI_COMMIT_BRANCH\n\nversionRegex='(\\d.\\d{1,2}(.\\d{1,2})?)'\nversionName=''\n\nif [ -n \"$ciCommitTag\" ];\nthen\n  versionName=$(echo \"$ciCommitTag\" | grep -Eio \"$versionRegex\")\nelif [ -n \"$ciCommitBranch\" ];\nthen\n  versionName=$(echo \"$ciCommitBranch\" | grep -Eio \"$versionRegex\")\nfi\n\nif [ -z \"$versionName\" ];\nthen\n  versionName='0.0.0'\nfi\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:VERSION_NAME string ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		583E5A6928C24D1000635B9B /* [CI/CD] inject marketing version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CI/CD] inject marketing version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nciCommitTag=$CI_COMMIT_TAG\nciCommitBranch=$CI_COMMIT_BRANCH\n\nversionRegex='(\\d.\\d{1,2}(.\\d{1,2})?)'\nversionName=''\n\nif [ -n \"$ciCommitTag\" ];\nthen\n  versionName=$(echo \"$ciCommitTag\" | grep -Eio \"$versionRegex\")\nelif [ -n \"$ciCommitBranch\" ];\nthen\n  versionName=$(echo \"$ciCommitBranch\" | grep -Eio \"$versionRegex\")\nfi\n\nif [ -z \"$versionName\" ];\nthen\n  versionName='0.0.1'\nfi\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:VERSION_NAME string ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		583E5A6A28C24E3600635B9B /* [CI/CD] inject marketing version */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CI/CD] inject marketing version";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nciCommitTag=$CI_COMMIT_TAG\nciCommitBranch=$CI_COMMIT_BRANCH\n\nversionRegex='(\\d.\\d{1,2}(.\\d{1,2})?)'\nversionName=''\n\nif [ -n \"$ciCommitTag\" ];\nthen\n  versionName=$(echo \"$ciCommitTag\" | grep -Eio \"$versionRegex\")\nelif [ -n \"$ciCommitBranch\" ];\nthen\n  versionName=$(echo \"$ciCommitBranch\" | grep -Eio \"$versionRegex\")\nfi\n\nif [ -z \"$versionName\" ];\nthen\n  versionName='0.0.1'\nfi\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleShortVersionString ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:VERSION_NAME string ${versionName}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		585FEF6C28819659008A84D3 /* [Doppler] inject plist configurations */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[Doppler] inject plist configurations";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\nBRANCH_KEY=`doppler secrets get BRANCH_KEY --plain`\nBRANCH_DEFAULT_LINK=`doppler secrets get BRANCH_DEFAULT_LINK --plain`\n\nREVERSED_CLIENT_ID=`doppler secrets get FIREBASE_IOS_REVERSED_CLIENT_ID --plain`\nENCODED_APP_ID=`doppler secrets get FIREBASE_IOS_ENCODED_APP_ID --plain`\n\nFACEBOOK_APP_ID=`doppler secrets get FACEBOOK_APP_ID --plain`\nFACEBOOK_CLIENT_TOKEN=`doppler secrets get FACEBOOK_CLIENT_TOKEN --plain`\n\n/usr/libexec/PlistBuddy -c \"Set :branch_key:live ${BRANCH_KEY}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :branch_universal_link_domains:0 ${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :com.apple.developer.associated-domains:0 applinks:${BRANCH_DEFAULT_LINK}\" \"${BUILT_PRODUCTS_DIR}/${CODE_SIGN_ENTITLEMENTS}\"\n\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:1:CFBundleURLSchemes:0 ${REVERSED_CLIENT_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleURLTypes:2:CFBundleURLSchemes:0 ${ENCODED_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n/usr/libexec/PlistBuddy -c \"Set :FacebookAppID ${FACEBOOK_APP_ID}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :FacebookClientToken ${FACEBOOK_CLIENT_TOKEN}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\n# used for debug in the app\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PIPELINE_IID string ${CI_PIPELINE_IID:-1}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TAG string ${CI_COMMIT_TAG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_BRANCH string ${CI_COMMIT_BRANCH}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_SHORT_SHA string ${CI_COMMIT_SHORT_SHA}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_TIMESTAMP string ${CI_COMMIT_TIMESTAMP}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_COMMIT_REF_SLUG string ${CI_COMMIT_REF_SLUG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_PROJECT_NAME string ${CI_PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n\nDOPPLER_ENVIRONMENT=`doppler secrets get DOPPLER_ENVIRONMENT --plain`\nDOPPLER_CONFIG=`doppler secrets get DOPPLER_CONFIG --plain`\n\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV string ${DOPPLER_ENVIRONMENT}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Add :custom_env_variables:CI_ENV_CONFIG string ${DOPPLER_CONFIG}\" \"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n";
+		};
+		96861F9A27B52F9000F92AA4 /* [Doppler] inject env.json */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject env.json";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Type a script or drag a script file from your workspace to insert its path.\ndoppler secrets download --fallback \"${SRCROOT}/../.doppler.cache\" --format json --no-file > ${SRCROOT}/../.env.json\n";
+		};
+		96B94D3227BBD9940010FEF4 /* [Doppler] inject GoogleService-Info.plist */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Doppler] inject GoogleService-Info.plist";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "eval \"$(/opt/homebrew/bin/brew shellenv)\"\n\n# Loads GoogleService-Info.plist directly into build dir\ndoppler secrets get FIREBASE_IOS --plain > ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\n\n";
+		};
+		A130D646172E58E1D159D8F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neobank-NeobankTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neobank/Pods-Neobank-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D97FF0FD83DDAE881D9200DC /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | /usr/bin/head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.app_data_collection_default_enabled\n  _APP_DATA_COLLECTION_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_data_collection_default_enabled\")\n  if [[ $_APP_DATA_COLLECTION_ENABLED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseDataCollectionDefaultEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_DATA_COLLECTION_ENABLED\")\")\n  fi\n\n  # config.analytics_auto_collection_enabled\n  _ANALYTICS_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_auto_collection_enabled\")\n  if [[ $_ANALYTICS_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_COLLECTION\")\")\n  fi\n\n  # config.analytics_collection_deactivated\n  _ANALYTICS_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_collection_deactivated\")\n  if [[ $_ANALYTICS_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FIREBASE_ANALYTICS_COLLECTION_DEACTIVATED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_DEACTIVATED\")\")\n  fi\n\n  # config.analytics_idfv_collection_enabled\n  _ANALYTICS_IDFV_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_idfv_collection_enabled\")\n  if [[ $_ANALYTICS_IDFV_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_IDFV_COLLECTION_ENABLED\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_IDFV_COLLECTION\")\")\n  fi\n\n  # config.analytics_default_allow_ad_personalization_signals\n  _ANALYTICS_PERSONALIZATION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"analytics_default_allow_ad_personalization_signals\")\n  if [[ $_ANALYTICS_PERSONALIZATION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GOOGLE_ANALYTICS_DEFAULT_ALLOW_AD_PERSONALIZATION_SIGNALS\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_PERSONALIZATION\")\")\n  fi\n\n  # config.google_analytics_automatic_screen_reporting_enabled\n  _ANALYTICS_AUTO_SCREEN_REPORTING=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"google_analytics_automatic_screen_reporting_enabled\")\n  if [[ $_ANALYTICS_AUTO_SCREEN_REPORTING ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAutomaticScreenReportingEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_ANALYTICS_AUTO_SCREEN_REPORTING\")\")\n  fi\n\n  # config.perf_auto_collection_enabled\n  _PERF_AUTO_COLLECTION=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_auto_collection_enabled\")\n  if [[ $_PERF_AUTO_COLLECTION ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_AUTO_COLLECTION\")\")\n  fi\n\n  # config.perf_collection_deactivated\n  _PERF_DEACTIVATED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"perf_collection_deactivated\")\n  if [[ $_PERF_DEACTIVATED ]]; then\n    _PLIST_ENTRY_KEYS+=(\"firebase_performance_collection_deactivated\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_PERF_DEACTIVATED\")\")\n  fi\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.in_app_messaging_auto_colllection_enabled\n  _FIAM_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"in_app_messaging_auto_collection_enabled\")\n  if [[ $_FIAM_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseInAppMessagingAutomaticDataCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_FIAM_AUTO_INIT\")\")\n  fi\n\n  # config.app_check_token_auto_refresh\n  _APP_CHECK_TOKEN_AUTO_REFRESH=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"app_check_token_auto_refresh\")\n  if [[ $_APP_CHECK_TOKEN_AUTO_REFRESH ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseAppCheckTokenAutoRefreshEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_APP_CHECK_TOKEN_AUTO_REFRESH\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes useful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"FirebaseCrashlyticsCollectionEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally\n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n";
+		};
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] && [ \"$CONFIGURATION\" == \"Debug\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00E356EA1AD99517003FC87E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* NeobankTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				585FEF7F28858E19008A84D3 /* SplashScreen.swift in Sources */,
+				58C783D42885AD2500CA6EBD /* RNSplashScreen.m in Sources */,
+				5803557E294B8310006AC16E /* RCTBuildInfoModule.m in Sources */,
+				58BE310B2A95F6AF001AA587 /* AppDelegate.mm in Sources */,
+				13B07FC11A68108700A75B9A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580A3A09288C9CC90062D225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE310C2A95F6C6001AA587 /* AppDelegate.mm in Sources */,
+				580A3A0A288C9CC90062D225 /* SplashScreen.swift in Sources */,
+				580A3A0C288C9CC90062D225 /* RNSplashScreen.m in Sources */,
+				5803557F294B8310006AC16E /* RCTBuildInfoModule.m in Sources */,
+				580A3A0D288C9CC90062D225 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		580DD54628AB9747004F802E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58BE310D2A95F6D1001AA587 /* AppDelegate.mm in Sources */,
+				580DD54728AB9747004F802E /* SplashScreen.swift in Sources */,
+				580DD54928AB9747004F802E /* RNSplashScreen.m in Sources */,
+				58035580294B8310006AC16E /* RCTBuildInfoModule.m in Sources */,
+				580DD54A28AB9747004F802E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13B07F861A680F5B00A75B9A /* Neobank */;
+			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E356F61AD99517003FC87E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C97AB639B58BBB4B15BBE30 /* Pods-Neobank-NeobankTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NeobankTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neobank.app/Neobank";
+			};
+			name = Debug;
+		};
+		00E356F71AD99517003FC87E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D0AE47A65C8663E3B452821 /* Pods-Neobank-NeobankTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = NeobankTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+					"$(inherited)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neobank.app/Neobank";
+			};
+			name = Release;
+		};
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A792AF5D98B0F4A93D8841B1 /* Pods-Neobank.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.neobank.app;
+				PRODUCT_NAME = Neobank;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development co.neobank.app";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92399A54BF5D4EA8739CFCED /* Pods-Neobank.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.neobank.app;
+				PRODUCT_NAME = Neobank;
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore co.neobank.app";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		580A3A25288C9CC90062D225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 418E9F366825BB7E09771F35 /* Pods-Neobank-NeobankDev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: It Sandbox Operations (JT95223WNN)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3D23YGKP5G;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.neobank.app-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development co.neobank.app-dev";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development co.neobank.app-dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		580A3A26288C9CC90062D225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45B9BAF058B9E3AE3D100EBE /* Pods-Neobank-NeobankDev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconDev;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: NEOBANK Systems Corporation (3D23YGKP5G)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.neobank.app-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore co.neobank.app-dev";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		580DD56328AB9747004F802E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CBCF29A59E3B3867A13290 /* Pods-Neobank-NeobankStg.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconStg;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.neobank.app-stg";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore co.neobank.app-stg";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		580DD56428AB9747004F802E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C19CCC0F18B5621549FBA2E2 /* Pods-Neobank-NeobankStg.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconStg;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Neobank/Neobank.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Distribution: NEOBANK Systems Corporation (3D23YGKP5G)";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3D23YGKP5G;
+				INFOPLIST_FILE = Neobank/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0.1;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "co.neobank.app-stg";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore co.neobank.app-stg";
+				SWIFT_OBJC_BRIDGING_HEADER = "Neobank-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH_KEY = "";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
+				PRODUCT_MODULE_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BRANCH_KEY = "";
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = i386;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SDKROOT)/usr/lib/swift\"",
+					"\"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)\"",
+					"\"$(inherited)\"",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
+				PRODUCT_MODULE_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "NeobankTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00E356F61AD99517003FC87E /* Debug */,
+				00E356F71AD99517003FC87E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Neobank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		580A3A24288C9CC90062D225 /* Build configuration list for PBXNativeTarget "NeobankDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				580A3A25288C9CC90062D225 /* Debug */,
+				580A3A26288C9CC90062D225 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		580DD56228AB9747004F802E /* Build configuration list for PBXNativeTarget "NeobankStg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				580DD56328AB9747004F802E /* Debug */,
+				580DD56428AB9747004F802E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Neobank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

@@ -1,0 +1,13 @@
+diff --git a/node_modules/@react-native/eslint-config/index.js b/node_modules/@react-native/eslint-config/index.js
+index 8de0800..eae4ac1 100644
+--- a/node_modules/@react-native/eslint-config/index.js
++++ b/node_modules/@react-native/eslint-config/index.js
+@@ -314,7 +314,7 @@ module.exports = {
+     'react/no-multi-comp': 0,
+     'react/no-string-refs': 1,
+     'react/no-unknown-property': 0,
+-    'react/no-unstable-nested-components': 1,
++    // 'react/no-unstable-nested-components': 1,
+     'react/prop-types': 0,
+     'react/react-in-jsx-scope': 1,
+     'react/self-closing-comp': 1,

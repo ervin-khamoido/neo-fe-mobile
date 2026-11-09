@@ -1,0 +1,73 @@
+export const colors = Object.freeze({
+  background: '#FFFFFF',
+  background2: 'rgba(213,213,213,0.3)',
+  background3: '#444444',
+  background4: '#000000',
+  accessoryBackground: '#F0F0F1',
+  disabledBackground: '#F4F4F4',
+  disabledBackground2: '#C2E4CC',
+  disabledBackground3: 'rgba(213,213,213,0.3)',
+  disabledBackground4: '#D5D5D5',
+  disabledBackground5: 'rgb(213,213,213)',
+  disabledBackground6: '#FFFFFF',
+
+  gray: '#FAFAFA',
+  gray2: '#747474',
+  gray3: '#626262',
+  gray4: '#E3E3E3',
+  gray5: '#DCDCDC',
+  gray6: '#C6C6C6',
+  gray7: '#CCCCCC',
+  gray8: '#F2F2F2',
+  gray9: '#E5E5E5',
+  gray10: '#F4F4F4',
+  gray11: '#7A7A7A',
+
+  input: '#FFFFFF',
+  border: '#D5D5D5',
+  border2: '#D9D9D9',
+  borderLight1: '#E4E4E4',
+  borderLight2: '#E3E3E3',
+  borderLight3: 'rgba(213, 213, 213, 0.3)',
+  borderLight4: 'rgba(217, 217, 217, 0.3)',
+  borderActive: '#000000',
+  borderActive2: '#34A655',
+
+  // ----
+  accent: '#34A655',
+  accentDisabled: 'rgba(52,166,85,0.3)',
+  primary: '#000000',
+  primaryLight: 'rgba(52,166,85,0.5)',
+  danger: '#C92D23',
+  danger2: '#FE3F33',
+
+  green: '#41D16D',
+
+  disabled: '#CCCCCC',
+  disabled2: '#F4F4F4',
+
+  text: '#000000',
+  textDisabled: '#CCCCCC',
+  textDisabled2: '#FFFFFF',
+  textLight: '#FFFFFF',
+  textLightTransparent: 'rgba(255,255,255,0)',
+  textSecondary: '#717171',
+  textSecondary2: 'rgba(0,0,0, 0.3)',
+  textSecondary3: 'rgba(0,0,0, 0.5)',
+  textSecondary4: '#262626',
+  textSecondary5: 'rgba(0,0,0, 0.4)',
+  textSecondaryDark: '#7A7A7A',
+  textSecondaryLight: '#f6f6f6',
+  textLabel: '#444444',
+  textLabel2: '#CCCCCC',
+  textLabel3: 'rgba(0,0,0, 0.3)',
+
+  tabInactive: 'rgba(0,0,0, 0.5)',
+
+  warningYellow: '#FFCA0D',
+
+  link: '#2980b9',
+  blue: '#238DC9',
+
+  utilityBackground: '#D5D5D54D',
+})

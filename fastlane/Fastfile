@@ -1,0 +1,351 @@
+current_environment = ENV['CI_ENVIRONMENT_NAME'] || 'development'
+
+platform :ios do
+  match_password = ENV['MATCH_PASSWORD']
+  app_build_number = ENV['CI_PIPELINE_IID']
+  app_store_connect_key_id = ENV['APP_STORE_CONNECT_KEY_ID']
+  app_store_connect_issuer_id = ENV['APP_STORE_CONNECT_ISSUER_ID']
+  app_store_connect_key = ENV['APP_STORE_CONNECT_KEY']
+  app_certificates_git_user = ENV['IOS_DEPLOY_USER']
+  app_certificates_git_password = ENV['IOS_DEPLOY_PASSWORD']
+
+  app_identifier = 'co.neobank.app-dev'
+  app_scheme = 'NeobankDev'
+  app_certificates_git_url = "https://#{app_certificates_git_user}:#{app_certificates_git_password}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git"
+
+  if current_environment == 'development'
+    app_identifier = 'co.neobank.app-dev'
+    app_scheme = 'NeobankDev'
+    app_certificates_git_url = "https://#{app_certificates_git_user}:#{app_certificates_git_password}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git"
+  elsif current_environment == 'stage'
+    app_identifier = 'co.neobank.app-stg'
+    app_scheme = 'NeobankStg'
+    app_certificates_git_url = "https://#{app_certificates_git_user}:#{app_certificates_git_password}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git"
+  elsif current_environment == 'production'
+    app_identifier = 'co.neobank.app'
+    app_scheme = 'Neobank'
+    app_certificates_git_url = "https://#{app_certificates_git_user}:#{app_certificates_git_password}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app.git"
+  else
+    puts ">>>>>>>> !!! UNKNOWN ENVIRONMENT_NAME = #{current_environment} <<<<<<<<"
+  end
+
+  # iOS Lanes
+  local_dev_stg_keychain_name = "neobank-dev-stg.keychain"
+  local_prd_keychain_name = "neobank.keychain"
+  default_local_keychain_password = "1234"
+
+  lane :get_my_certs do
+    create_keychain(
+      name: local_dev_stg_keychain_name,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false,
+      password: default_local_keychain_password
+    )
+
+    match(
+      app_identifier: 'co.neobank.app-dev',
+      type: 'development',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+      username: 'ios.sandbox.it@neobank.co',
+      keychain_name: local_dev_stg_keychain_name,
+      keychain_password: default_local_keychain_password,
+      readonly: true
+    )
+
+    match(
+      app_identifier: 'co.neobank.app-dev',
+      type: 'appstore',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+      username: 'ios.sandbox.it@neobank.co',
+      keychain_name: local_dev_stg_keychain_name,
+      keychain_password: default_local_keychain_password,
+      readonly: true
+    )
+  end
+
+  desc 'Generate iOS development/distribution certificates and profiles for DEV environment'
+  lane :generate_certs_dev do
+    create_keychain(
+      name: local_dev_stg_keychain_name,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false,
+      password: default_local_keychain_password
+    )
+
+    match(
+      app_identifier: 'co.neobank.app-dev',
+      type: 'development',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+      username: 'ios.sandbox.it@neobank.co',
+      keychain_name: local_dev_stg_keychain_name,
+      keychain_password: default_local_keychain_password
+    )
+
+    match(
+      app_identifier: 'co.neobank.app-dev',
+      type: 'appstore',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+      username: 'ios.sandbox.it@neobank.co',
+      keychain_name: local_dev_stg_keychain_name,
+      keychain_password: default_local_keychain_password
+    )
+  end
+
+  desc 'Generate iOS development/distribution certificates and profiles for STG environment'
+  lane :generate_certs_stg do
+    create_keychain(
+      name: local_dev_stg_keychain_name,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false,
+      password: default_local_keychain_password
+    )
+
+    match(
+        app_identifier: 'co.neobank.app-stg',
+        type: 'development',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+        username: 'ios.sandbox.it@neobank.co',
+        keychain_name: local_dev_stg_keychain_name,
+        keychain_password: default_local_keychain_password
+    )
+
+    match(
+        app_identifier: 'co.neobank.app-stg',
+        type: 'appstore',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+        username: 'ios.sandbox.it@neobank.co',
+        keychain_name: local_dev_stg_keychain_name,
+        keychain_password: default_local_keychain_password
+    )
+  end
+
+  desc 'Revoke all iOS development/distribution certificates and profiles for STG/DEV environments'
+  lane :nuke_certs_dev_stg do
+    match_nuke(
+        app_identifier: ['co.neobank.app-dev', 'co.neobank.app-stg'],
+        type: 'development',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+        username: 'ios.sandbox.it@neobank.co'
+    )
+
+    match_nuke(
+        app_identifier: ['co.neobank.app-dev', 'co.neobank.app-stg'],
+        type: 'appstore',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app-dev-stg.git',
+        username: 'ios.sandbox.it@neobank.co'
+    )
+  end
+
+  desc 'Generate iOS development/distribution certificates and profiles for PRD environment'
+  lane :generate_certs_prd do
+    create_keychain(
+      name: local_prd_keychain_name,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false,
+      password: default_local_keychain_password
+    )
+
+    match(
+      app_identifier: 'co.neobank.app',
+      type: 'development',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app.git',
+      username: 'ios.it@neobank.co',
+      keychain_name: local_prd_keychain_name,
+      keychain_password: default_local_keychain_password
+    )
+
+    match(
+      app_identifier: 'co.neobank.app',
+      type: 'appstore',
+      git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app.git',
+      username: 'ios.it@neobank.co',
+      keychain_name: local_prd_keychain_name,
+      keychain_password: default_local_keychain_password
+    )
+  end
+
+  desc 'Revoke iOS development/distribution certificates and profiles for PRD environment'
+  lane :nuke_certs_prd do
+    match_nuke(
+        app_identifier: 'co.neobank.app',
+        type: 'development',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app.git',
+        username: 'ios.it@neobank.co'
+    )
+
+    match_nuke(
+        app_identifier: 'co.neobank.app',
+        type: 'appstore',
+        git_url: 'git@gitlab.com:build-credit-with-me-llc/neobank/mobile-keys/ios.co.neobank.app.git',
+        username: 'ios.it@neobank.co'
+    )
+  end
+
+  ######################## BUILD MACHINE SCRIPTS ###################
+
+  def ensure_temp_keychain(keychain_name, password)
+    delete_keychain(name: keychain_name) if File.exist? File.expand_path("~/Library/Keychains/#{keychain_name}-db")
+    create_keychain(
+      name: keychain_name,
+      unlock: true,
+      timeout: 0,
+      lock_when_sleeps: false,
+      password: password
+    )
+  end
+
+  desc 'Fetch iOS certificates and provisioning profiles'
+  lane :certificates do
+    match(
+      app_identifier: app_identifier,
+      type: 'appstore',
+      readonly: true,
+      git_url: app_certificates_git_url,
+      keychain_name: "neobank.keychain",
+      keychain_password: match_password
+    )
+  end
+
+  desc 'Build the dev iOS application.'
+  lane :build do
+    ensure_temp_keychain("neobank.keychain", match_password)
+
+    certificates
+    cocoapods(clean: true, podfile: './ios/Podfile')
+    increment_build_number(xcodeproj: './ios/Neobank.xcodeproj', build_number: app_build_number)
+    gym(scheme: app_scheme, workspace: './ios/Neobank.xcworkspace', silent: true, suppress_xcode_output: true)
+
+    delete_keychain(name: "neobank.keychain")
+  end
+
+  desc 'Ship iOS to Testflight.'
+  lane :beta do
+    build
+
+    api_key = app_store_connect_api_key(
+        key_id: app_store_connect_key_id,
+        issuer_id: app_store_connect_issuer_id,
+        key_content: app_store_connect_key,
+        duration: 1200, # optional (maximum 1200)
+        in_house: false # optional but may be required if using match/sigh
+    )
+
+    upload_to_testflight(
+        api_key: api_key,
+        skip_submission: true,
+        changelog: get_shortcut_story,
+        skip_waiting_for_build_processing: true,
+    )
+    # upload_symbols
+  end
+
+  desc 'Upload symbols to Sentry'
+  lane :upload_symbols do
+    #download_dsyms
+#     sentry_upload_dsym(
+#       auth_token: ENV['SENTRY_AUTH_TOKEN'],
+#       org_slug: ENV['SENTRY_ORG'],
+#       project_slug: ENV['SENTRY_PROJECT'],
+#     )
+  end
+end
+
+platform :android do
+
+  # Android Lanes
+
+  desc 'Build the Android application.'
+  lane :build do
+    gradle(task: 'clean', project_dir: 'android/')
+    gradle(task: 'assemble', build_type: 'Release', project_dir: 'android/')
+  end
+
+  desc 'Bundle the Android application.'
+  lane :build_prod do
+    gradle(task: 'clean', project_dir: 'android/')
+    gradle(task: 'assemble', build_type: 'Release', project_dir: 'android/')
+    gradle(task: 'bundle', build_type: 'Release', project_dir: 'android/')
+  end
+
+  desc 'Ship to Playstore Beta.'
+  lane :beta do
+    build
+    supply(
+      package_name: 'com.neobank',
+      track: 'alpha',
+      track_promote_to: 'alpha',
+      json_key: 'android_key.json'
+    )
+    # git_commit(path: ['./android/gradle.properties'], message: 'Bump versionCode')
+    # push_to_git_remote
+  end
+
+  desc 'Upload To Google Drive'
+  lane :upload_artifacts_to_google_drive do
+    ci_slack_incoming_webhook = ENV['CI_SLACK_INCOMING_WEBHOOK_URL']
+
+    ci_project_name = ENV['CI_PROJECT_NAME']
+    ci_commit_ref_slug = ENV['CI_COMMIT_REF_SLUG']
+    ci_pipeline_iid = ENV['CI_PIPELINE_IID']
+    ci_commit_short_sha = ENV['CI_COMMIT_SHORT_SHA']
+    ci_commit_message = ENV['CI_COMMIT_MESSAGE']
+    ci_mr_title = ENV['CI_MERGE_REQUEST_TITLE']
+
+    android_version_id = "#{ci_project_name}-#{ci_commit_ref_slug}-#{ci_pipeline_iid}-#{ci_commit_short_sha}"
+
+    android_upload_files = []
+    android_upload_folder = ENV['CI_GOOGLE_DRIVE_FOLDER']
+    if current_environment == 'development'
+      android_upload_files = ["./output/DEV-app-develop-#{android_version_id}.apk"]
+    elsif current_environment == 'stage'
+      android_upload_files = ["./output/STG-app-staging-#{android_version_id}.apk"]
+    elsif current_environment == 'production'
+      android_upload_files = ["./output/PRD-neobank-app-#{android_version_id}.apk", "./output/PRD-neobank-app-#{android_version_id}.aab"]
+    else
+      puts ">>>>>>>> !!! UNKNOWN ENVIRONMENT_NAME = #{current_environment} <<<<<<<<"
+    end
+
+    upload_to_google_drive(
+      drive_keyfile: 'neobank-app-service-account.json',
+      service_account: true,
+      folder_id: android_upload_folder,
+      upload_files: android_upload_files
+    )
+
+    slack(
+      slack_url: ci_slack_incoming_webhook,
+      message: 'A new Android build is available.',
+      success: true,
+      payload: {
+        "Pipeline IID" => ci_pipeline_iid,
+        "Android Version ID" => android_version_id,
+        "Google Drive" => "https://drive.google.com/drive/u/0/folders/#{android_upload_folder}",
+        "GitLab Commit Message" => ci_commit_message,
+        "Shortcut" => get_shortcut_story
+      },
+      default_payloads: [], # Optional, lets you specify default payloads to include. Pass an empty array to suppress all the default payloads.
+    )
+  end
+
+end
+
+
+def get_shortcut_story()
+  ci_commit_message = ENV['CI_COMMIT_MESSAGE']
+  ci_shortcut_story_url = ENV['CI_SHORTCUT_STORY_URL']
+
+  if !ci_commit_message || !ci_shortcut_story_url
+    return 'No Shortcut Story'
+  end
+
+  shortcut_story_id = ci_commit_message.match /sc-([0-9]+)/
+  if shortcut_story_id && shortcut_story_id.length() > 1
+    return "#{ci_shortcut_story_url}/#{shortcut_story_id[1]}"
+  else
+    return 'No Shortcut Story'
+  end
+end

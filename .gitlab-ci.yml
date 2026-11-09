@@ -1,0 +1,442 @@
+stages:
+  - quality
+  - build
+  - publish
+
+variables:
+  LANG: 'en_US.UTF-8'
+  LC_ALL: 'en_US.UTF-8'
+  ENVFILE: .env.production
+  VERSION_ID: $CI_PROJECT_NAME-$CI_COMMIT_REF_SLUG-$CI_PIPELINE_IID-$CI_COMMIT_SHORT_SHA
+  NODE_VERSION: 18.16.1
+  BUNDLER_VERSION: 1.14.6
+
+quality control:
+  image: node:$NODE_VERSION
+  stage: quality
+  script:
+    - yarn install --frozen-lockfile
+    - echo "{}">.env.json
+    - yarn build
+    - yarn lint
+    - yarn test
+  only:
+    - develop
+    - merge_requests
+    - tags
+
+
+ios develop:
+  tags:
+    - ios
+  stage: build
+  script:
+    - gem --version
+    - ruby --version
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    - yarn cache clean
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    - bundle exec pod repo update
+    - export ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD=true
+    - bundle exec fastlane ios beta
+    - mkdir output
+    - mv NeobankDev.ipa ./output/DEV-app-develop-$VERSION_ID.ipa
+    - mv NeobankDev.app.dSYM.zip ./output/DEV-app-develop-$VERSION_ID.app.dSYM.zip
+  timeout: 1h 30m
+  only:
+    - develop
+  environment:
+    name: development
+  variables:
+    MATCH_PASSWORD: $MATCH_PASSWORD
+  artifacts:
+    paths:
+      - fastlane/screenshots
+      - fastlane/logs
+      - output/
+
+ios develop feature:
+  tags:
+    - ios
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    - yarn cache clean
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    - bundle exec pod repo update
+    - export ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD=true
+    - bundle exec fastlane ios beta
+    - mkdir output
+    - mv NeobankDev.ipa ./output/DEV-app-develop-feature-$VERSION_ID.ipa
+    - mv NeobankDev.app.dSYM.zip ./output/DEV-app-develop-feature-$VERSION_ID.app.dSYM.zip
+  timeout: 1h 30m
+  except:
+    - main
+    - develop
+  when: manual
+  environment:
+    name: development
+  variables:
+    MATCH_PASSWORD: $MATCH_PASSWORD
+  artifacts:
+    paths:
+      - fastlane/screenshots
+      - fastlane/logs
+      - output/
+
+ios staging:
+  tags:
+    - ios
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    - yarn cache clean
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    - bundle exec pod repo update
+    - export ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD=true
+    - bundle exec fastlane ios beta
+    - mkdir output
+    - mv NeobankStg.ipa ./output/STG-app-staging-$VERSION_ID.ipa
+    - mv NeobankStg.app.dSYM.zip ./output/STG-app-staging-$VERSION_ID.app.dSYM.zip
+  timeout: 1h 30m
+  only:
+    - /^release\/v.*/
+    - /^hotfix\/v.*/
+  environment:
+    name: stage
+  variables:
+    MATCH_PASSWORD: $MATCH_PASSWORD
+  artifacts:
+    paths:
+      - fastlane/screenshots
+      - fastlane/logs
+      - output/
+
+ios staging demo:
+  tags:
+    - ios
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    - yarn cache clean
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    - bundle exec pod repo update
+    - export ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD=true
+    - bundle exec fastlane ios beta
+    - mkdir output
+    - mv NeobankStg.ipa ./output/STG-app-staging-$VERSION_ID.ipa
+    - mv NeobankStg.app.dSYM.zip ./output/STG-app-staging-$VERSION_ID.app.dSYM.zip
+  timeout: 1h 30m
+  when: manual
+  only:
+    - /^demo\/v.*/
+  environment:
+    name: stage
+  variables:
+    MATCH_PASSWORD: $MATCH_PASSWORD
+  artifacts:
+    paths:
+      - fastlane/screenshots
+      - fastlane/logs
+      - output/
+
+ios production:
+  tags:
+    - ios
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    - yarn cache clean
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    - bundle exec pod repo update
+    - export ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD=true
+    - bundle exec fastlane ios beta
+    - mkdir output
+    - mv Neobank.ipa ./output/PRD-neobank-app-$VERSION_ID.ipa
+    - mv Neobank.app.dSYM.zip ./output/PRD-neobank-app-$VERSION_ID.app.dSYM.zip
+  timeout: 1h 30m
+  when: manual
+  only:
+    - tags
+    - /^release\/v.*/
+    - /^hotfix\/v.*/
+    - /^demo\/v.*/
+  environment:
+    name: production
+  variables:
+    MATCH_PASSWORD: $MATCH_PASSWORD
+  artifacts:
+    paths:
+      - fastlane/screenshots
+      - fastlane/logs
+      - output/
+
+android develop:
+  tags:
+    - android
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    # - npm install -g @sentry/cli --unsafe-perm
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    # - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+    # - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+    # - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+    - mkdir -p tmp
+    - git clone --branch master $KEY_REPO './tmp/deploy'
+    # - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+    - bundle exec fastlane android build
+    - rm -rf tmp
+    # - rm android_key.json
+    - mkdir output
+    - mv android/app/build/outputs/apk/release/app-release.apk ./output/DEV-app-develop-$VERSION_ID.apk
+    # upload the artifacts to a Google Drive
+    - doppler secrets get CI_GOOGLE_SERVICE_ACCOUNT --plain>neobank-app-service-account.json
+    - doppler run -- bundle exec fastlane android upload_artifacts_to_google_drive
+    - rm neobank-app-service-account.json
+  only:
+    - develop
+  environment:
+    name: development
+  variables:
+    KEY_REPO: https://${MOBILE_DEPLOY_USER}:${MOBILE_DEPLOY_PASSWORD}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keystore.git
+    RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/$ANDROID_KEYSTORE_PATH
+    RELEASE_STORE_PASSWORD: $ANDROID_KEYSTORE_PASSWORD
+    RELEASE_KEY_ALIAS: neobank-key
+    RELEASE_KEY_PASSWORD: $ANDROID_CERTIFICATE_PASSWORD
+  artifacts:
+    paths:
+      - output/
+
+android develop feature:
+  tags:
+    - android
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    # - npm install -g @sentry/cli --unsafe-perm
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    # - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+    # - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+    # - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+    - mkdir -p tmp
+    - git clone --branch master $KEY_REPO './tmp/deploy'
+    # - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+    - bundle exec fastlane android build
+    - rm -rf tmp
+    # - rm android_key.json
+    - mkdir output
+    - mv android/app/build/outputs/apk/release/app-release.apk ./output/DEV-app-development-feature-$VERSION_ID.apk
+  except:
+    - main
+    - develop
+  when: manual
+  environment:
+    name: development
+  variables:
+    KEY_REPO: https://${MOBILE_DEPLOY_USER}:${MOBILE_DEPLOY_PASSWORD}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keystore.git
+    RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/$ANDROID_KEYSTORE_PATH
+    RELEASE_STORE_PASSWORD: $ANDROID_KEYSTORE_PASSWORD
+    RELEASE_KEY_ALIAS: neobank-key
+    RELEASE_KEY_PASSWORD: $ANDROID_CERTIFICATE_PASSWORD
+  artifacts:
+    paths:
+      - output/
+
+android staging:
+  tags:
+    - android
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    # - npm install -g @sentry/cli --unsafe-perm
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    # - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+    # - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+    # - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+    - mkdir -p tmp
+    - git clone --branch master $KEY_REPO './tmp/deploy'
+    # - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+    - bundle exec fastlane android build
+    - rm -rf tmp
+    # - rm android_key.json
+    - mkdir output
+    - mv android/app/build/outputs/apk/release/app-release.apk ./output/STG-app-staging-$VERSION_ID.apk
+  only:
+    - /^release\/v.*/
+    - /^hotfix\/v.*/
+  environment:
+    name: stage
+  variables:
+    KEY_REPO: https://${MOBILE_DEPLOY_USER}:${MOBILE_DEPLOY_PASSWORD}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keystore.git
+    RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/$ANDROID_KEYSTORE_PATH
+    RELEASE_STORE_PASSWORD: $ANDROID_KEYSTORE_PASSWORD
+    RELEASE_KEY_ALIAS: neobank-key
+    RELEASE_KEY_PASSWORD: $ANDROID_CERTIFICATE_PASSWORD
+  artifacts:
+    paths:
+      - output/
+
+android staging demo:
+  tags:
+    - android
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    # - npm install -g @sentry/cli --unsafe-perm
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    # - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+    # - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+    # - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+    - mkdir -p tmp
+    - git clone --branch master $KEY_REPO './tmp/deploy'
+    # - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+    - bundle exec fastlane android build
+    - rm -rf tmp
+    # - rm android_key.json
+    - mkdir output
+    - mv android/app/build/outputs/apk/release/app-release.apk ./output/STG-app-staging-$VERSION_ID.apk
+  when: manual
+  only:
+    - /^demo\/v.*/
+  environment:
+    name: stage
+  variables:
+    KEY_REPO: https://${MOBILE_DEPLOY_USER}:${MOBILE_DEPLOY_PASSWORD}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keystore.git
+    RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/$ANDROID_KEYSTORE_PATH
+    RELEASE_STORE_PASSWORD: $ANDROID_KEYSTORE_PASSWORD
+    RELEASE_KEY_ALIAS: neobank-key
+    RELEASE_KEY_PASSWORD: $ANDROID_CERTIFICATE_PASSWORD
+  artifacts:
+    paths:
+      - output/
+
+android production:
+  tags:
+    - android
+  stage: build
+  script:
+    - echo fetch API_ROOT
+    - doppler secrets get API_ROOT --plain
+    - gem install bundler -v $BUNDLER_VERSION || echo "gem install bundler failed"
+    - bundle install
+    - nvm install $NODE_VERSION && nvm use $NODE_VERSION
+    # - npm install -g @sentry/cli --unsafe-perm
+    - yarn install --frozen-lockfile
+    - echo '{}'>.env.json
+    - yarn react-native-vector-image generate
+    # - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+    # - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+    # - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+    - mkdir -p tmp
+    - git clone --branch master $KEY_REPO './tmp/deploy'
+    # - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+    - bundle exec fastlane android build_prod
+    - rm -rf tmp
+    # - rm android_key.json
+    - mkdir output
+    - mv android/app/build/outputs/apk/release/app-release.apk ./output/PRD-neobank-app-$VERSION_ID.apk
+    - mv android/app/build/outputs/bundle/release/app-release.aab ./output/PRD-neobank-app-$VERSION_ID.aab
+  when: manual
+  only:
+    - tags
+    - /^release\/v.*/
+    - /^hotfix\/v.*/
+    - /^demo\/v.*/
+  environment:
+    name: production
+  variables:
+    KEY_REPO: https://${MOBILE_DEPLOY_USER}:${MOBILE_DEPLOY_PASSWORD}@gitlab.com/build-credit-with-me-llc/neobank/mobile-keystore.git
+    RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/$ANDROID_KEYSTORE_PATH
+    RELEASE_STORE_PASSWORD: $ANDROID_KEYSTORE_PASSWORD
+    RELEASE_KEY_ALIAS: neobank-key-prod
+    RELEASE_KEY_PASSWORD: $ANDROID_CERTIFICATE_PASSWORD
+  artifacts:
+    paths:
+      - output/
+
+
+# playmarket:
+#   tags:
+#     - android
+#   stage: stores
+#   script:
+#     - gem install bundler -v 1.14.6 && bundle install
+#     - nvm install 8 && nvm use 8
+#     - npm install
+#     - echo VERSION_ID=$VERSION_ID >> $ENVFILE
+#     - echo REVENUE_CAT_KEY=$REVENUE_CAT_KEY >> $ENVFILE
+#     - echo STRIPE_PUBLISHABLE_KEY=$STRIPE_PUBLISHABLE_KEY >> $ENVFILE
+#     - mkdir -p tmp
+#     - git clone --branch master $KEY_REPO './tmp/deploy'
+#     - openssl des -d -in ./tmp/deploy/android/key.json.enc -out android_key.json -pass pass:$MATCH_PASSWORD
+#     - bundle exec fastlane android beta
+#     - rm -rf tmp
+#     - rm android_key.json
+#   only:
+#     - master
+#   environment:
+#     name: playmarket
+#   variables:
+#     KEY_REPO: https://$CI_DEPLOY_USER:$CI_DEPLOY_PASSWORD@gitlab.com/bus-stop/deploy.git
+#     RELEASE_STORE_FILE: $CI_PROJECT_DIR/tmp/deploy/android/busstop.keystore
+#     RELEASE_STORE_PASSWORD: $MATCH_PASSWORD
+#     RELEASE_KEY_ALIAS: busstop
+#     RELEASE_KEY_PASSWORD: $MATCH_PASSWORD
+#   artifacts:
+#     paths:
+#       - android/release/release/
